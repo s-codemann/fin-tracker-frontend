@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  background-color: white;
+  color: blue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: dodgerblue;
+  padding: 50px;
+}

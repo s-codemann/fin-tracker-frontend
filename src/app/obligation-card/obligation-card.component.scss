@@ -1,0 +1,94 @@
+.card {
+  width: 330px;
+  height: 240px;
+  border-radius: 5px;
+  background-color: var(--light-blue-2);
+  box-shadow: 4px 4px 0px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: scale 200ms;
+  &:hover {
+    scale: 1.01;
+  }
+}
+.title {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50%;
+}
+.payment-status-indicator {
+  position: absolute;
+  width: 400px;
+  //   right: 0%;
+  translate: 0 -100%;
+  width: 230px;
+  top: 0px;
+  left: 60%;
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.904),
+    rgba(0, 0, 0, 0.329)
+  );
+  rotate: 45deg;
+  transform-origin: left;
+}
+.options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  //background-color: white;
+  width: 80px;
+  height: 80px;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  transform-origin: center;
+  rotate: 45deg;
+  translate: 5px -5px;
+  circle {
+    fill: rgba(255, 68, 0, 0.582);
+    stroke: orangered;
+  }
+}
+.total {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  height: 70px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d95b;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  span {
+    font-size: 2rem;
+  }
+}
+.monthly {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  height: 70px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  span {
+    font-size: 2rem;
+  }
+}

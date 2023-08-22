@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  background-color: var(--bright-cyan);
+  height: 100vh;
+  padding: 50px 130px;
+  box-sizing: border-box;
+}
+.title-container {
+  overflow: hidden;
+  background-color: var(--light-blue);
+  width: fit-content;
+  padding: 0 100px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  position: relative;
+  right: 50px;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+main {
+  display: flex;
+}

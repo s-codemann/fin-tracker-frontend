@@ -1,0 +1,22 @@
+.add-form {
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.781);
+}
+.background {
+  position: absolute;
+  width: 100%;
+  &::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.603);
+    position: absolute;
+    inset: 0;
+  }
+}
