@@ -1,3 +1,6 @@
 <div class="info-text">
-  <span class="text">Left to pay:</span> <span class="amount">500€</span>
+  <span class="text">Left to pay:</span>
+  <span class="amount"
+    >{{ (totalInstallments$ | async) + (totalDebts$ | async) }}€</span
+  >
 </div>

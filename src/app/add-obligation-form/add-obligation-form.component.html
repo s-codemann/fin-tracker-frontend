@@ -1,7 +1,62 @@
-<form>
-  <label for="name">name</label>
-  <input type="text" name="name" id="name" />
-  <label for="monthly">monthly</label>
-  <input type="text" name="monthly" id="monthly" pattern="[0-9]+" />
-</form>
-<button class="close" (click)="close()">X</button>
+<div class="form-container">
+  <select #select name="type" id="type" (change)="switchForm($event)">
+    <option value="debt">debt</option>
+    <option value="installment">installment</option>
+  </select>
+  <form [formGroup]="debtForm" *ngIf="showDebtCreationForm">
+    <label for="name">name *</label>
+    <input formControlName="title" type="text" name="name" id="name" />
+    <label for="monthly">monthly *</label>
+    <input
+      formControlName="monthly"
+      type="number"
+      step="5"
+      name="monthly"
+      id="monthly"
+      pattern="[0-9]+"
+    />
+    <label for="total">total </label>
+    <input
+      formControlName="total"
+      type="number"
+      step="5"
+      name="total"
+      id="total"
+      pattern="[0-9]+"
+    />
+    <label for="due">due date (of month) </label>
+    <input
+      formControlName="dueTime"
+      type="text"
+      name="due"
+      id="due"
+      pattern="[0-9]+"
+    />
+    <label for="last-paid">last month you paid this rate </label>
+    <input
+      formControlName="lastPaidDate"
+      type="text"
+      name="last-paid"
+      id="last-paid"
+      pattern="[0-9]+"
+    />
+    <button class="submit" (click)="create($event)">Create</button>
+  </form>
+  <form [formGroup]="installmentForm" *ngIf="showInstallmentCreationForm">
+    <label for="name">name *</label>
+    <input formControlName="title" type="text" name="name" id="name" />
+    <label for="monthly">monthly *</label>
+    <input
+      formControlName="monthly"
+      type="number"
+      name="monthly"
+      id="monthly"
+      pattern="[0-9]+"
+    />
+    <label for="running-until">until</label>
+    <input formControlName="activeUntil" type="text" />
+    <button class="submit" (click)="create($event)">Create</button>
+  </form>
+
+  <button class="close" (click)="close()">X</button>
+</div>

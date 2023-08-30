@@ -1,5 +1,7 @@
 export interface IObligation {
   title: string;
-  monthly: string;
-  active:false
+  monthly: number;
+  active?: boolean;
+  lastPaidDate?: number;
+  dueTime?: number;
 }

@@ -1,3 +1,16 @@
-<ng-content></ng-content>
+<!-- <ng-content></ng-content> -->
+<div class="cards">
+  <ng-container *ngIf="(selectedCategory$ | async) === 'debt'">
+    <app-debt-card
+      *ngFor="let debt of debts$ | async"
+      [debt]="debt"
+    ></app-debt-card>
+  </ng-container>
+  <ng-container *ngIf="(selectedCategory$ | async) === 'installment'">
+    <app-installment-card
+      [installment]="installment"
+      *ngFor="let installment of installments$ | async"
+    ></app-installment-card>
+  </ng-container>
+</div>
 <app-add-obligation (add)="emitAdd()"></app-add-obligation>
-

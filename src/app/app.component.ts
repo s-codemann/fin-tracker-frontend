@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ICard } from './models/card.interface';
 import { enterAnimation } from './animations/add-form-animations';
 import { AddObligationFormComponent } from './add-obligation-form/add-obligation-form.component';
+import { ObligationService } from './obligation.service';
 
 @Component({
   selector: 'app-root',

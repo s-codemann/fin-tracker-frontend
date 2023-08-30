@@ -1,10 +1,5 @@
 <app-obligation-backdrop [class.background]="addingObligation">
-  <app-card-container obligationContainer (add)="add()">
-    <app-obligation-card
-      *ngFor="let card of cards"
-      [card]="card"
-    ></app-obligation-card>
-  </app-card-container>
+  <app-card-container obligationContainer (add)="add()"> </app-card-container>
   <app-info-container infoContainer></app-info-container>
 </app-obligation-backdrop>
 <app-add-obligation-form
@@ -14,3 +9,4 @@
   (closeForm)="closeForm()"
   >hallo</app-add-obligation-form
 >
+<app-status-bar></app-status-bar>
